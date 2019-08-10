@@ -2,25 +2,31 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
+.img-responsive {
+    max-width: 100%;
+}
+
 .hero_image {
     background: url(heroimage.jpg) no-repeat;
     -webkit-background-size: cover;
     background-size: cover;
     height: 100vh;
+    position: relative;
 }
 
 .hero_wrapper {
-    color: white;
+    color:white;
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%,-50%);
 }
 
 .hero_wrapper h1 {
     font-size: 2.4rem;
     text-align: center;
 }
+
 
 .hero_wrapper span {
     margin-left: 5rem;
@@ -39,9 +45,8 @@ body {
     margin-right: auto;
     border-radius: 2rem;
     padding: .6rem;
-    border: none;
-    outline: none;
-
+    border:none;
+    outline:none;
 }
 
 .form_code button {
@@ -50,18 +55,33 @@ body {
     background-color: #00bab1;
     color: white;
     padding: .6rem;
-    margin: 1rem auto 0rem;
+    margin:1rem auto 0rem;
     border: none;
     border-radius: .3rem;
 }
 
 .product {
-    width: 80%;
+    width: 90%;
+    margin-top: .3rem;
     margin-left: auto;
     margin-right: auto;
 }
 
-.product_list_item {
+.product__list__item {
     float: left;
-    width: 33.33%;
+    width: 32%;
+    margin-left: .5rem;
+}
+
+
+.product__list__item:first-of-type {
+    margin-left: 0;
+}
+
+
+@media screen and (max-width: 700px) {
+    .product__list__item {
+        width: 100%;
+        float: none;
+    }
 }
